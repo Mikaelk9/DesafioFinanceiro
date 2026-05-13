@@ -1,16 +1,80 @@
-# React + Vite
+# 💰 Desafio Financeiro 1 → 500
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um sistema web gamificado para acompanhar o desafio financeiro de guardar valores de **R$1 até R$500**, permitindo marcar aportes, acompanhar progresso e visualizar estatísticas em tempo real.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# 🚀 Preview
 
-## React Compiler
+O projeto permite:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- marcar números como:
+  - ⬜ pendente
+  - 🟨 reservado
+  - ✅ pago
+- acompanhar progresso financeiro
+- visualizar total guardado
+- salvar automaticamente no navegador
+- filtrar números por status
+- acompanhar evolução do desafio
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# 🛠 Tecnologias utilizadas
+
+- React
+- Vite
+- Tailwind CSS
+- LocalStorage
+
+---
+
+# ✨ Funcionalidades
+
+## ✅ Sistema de status
+
+Cada número possui 3 estados:
+
+- ⬜ Pendente
+- 🟨 Reservado
+- ✅ Pago
+
+---
+
+## 📊 Dashboard financeiro
+
+Exibe:
+
+- valor total guardado
+- valor reservado
+- progresso percentual
+- quantidade de números concluídos
+
+---
+
+## 💾 Salvamento automático
+
+Os dados são persistidos automaticamente utilizando:
+
+`localStorage`
+
+Mesmo atualizando a página, o progresso continua salvo.
+
+---
+
+## 🔎 Filtros
+
+Filtragem dinâmica por:
+
+- todos
+- pendentes
+- reservados
+- pagos
+
+---
+
+## 📈 Barra de progresso
+
+Visualização do avanço total do desafio em tempo real.
+
+---
