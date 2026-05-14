@@ -36,8 +36,8 @@ export default function App() {
           item.status === "pending"
             ? "reserved"
             : item.status === "reserved"
-            ? "paid"
-            : "pending";
+              ? "paid"
+              : "pending";
 
         return {
           ...item,
@@ -96,12 +96,15 @@ export default function App() {
 
         {/* HEADER */}
         <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-2">
-            Desafio Financeiro 1 → 500
+          <h1 className="text-4xl font-bold mb-3 md:text-6xl">
+            100K
           </h1>
 
+          <p className="text-zinc-400 mb-1">
+            Transforme investimentos em progresso visual.
+          </p>
           <p className="text-zinc-400">
-            Clique nos números para alterar o status.
+            Cada aporte é um passo rumo aos seus primeiros R$100 mil em patrimônio.
           </p>
         </div>
 
@@ -164,7 +167,7 @@ export default function App() {
 
             <button
               onClick={resetProgress}
-              className="px-4 py-2 rounded-xl bg-red-500 hover:bg-red-600 transition"
+              className="px-4 py-2 rounded-xl bg-red-500 hover:bg-red-600 transition cursor-pointer"
             >
               Resetar
             </button>
@@ -179,6 +182,12 @@ export default function App() {
           </div>
         </div>
 
+        <div className="mb-4">
+          <p className="text-zinc-400">
+            Clique nos números para alterar o status.
+          </p>
+        </div>
+
         {/* GRID */}
         <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-3">
 
@@ -190,10 +199,9 @@ export default function App() {
                 h-16 rounded-2xl font-semibold transition-all duration-200 border
                 hover:scale-105 active:scale-95 cursor-pointer
 
-                ${
-                  number.status === "pending"
-                    ? "bg-zinc-900 border-zinc-800 hover:bg-zinc-800"
-                    : number.status === "reserved"
+                ${number.status === "pending"
+                  ? "bg-zinc-900 border-zinc-800 hover:bg-zinc-800"
+                  : number.status === "reserved"
                     ? "bg-yellow-400 text-black border-yellow-300"
                     : "bg-green-500 text-black border-green-400"
                 }
@@ -229,12 +237,11 @@ function FilterButton({ children, active, onClick }) {
     <button
       onClick={onClick}
       className={`
-        px-4 py-2 rounded-xl transition-all
+        px-4 py-2 rounded-xl transition-all cursor-pointer
 
-        ${
-          active
-            ? "bg-white text-black"
-            : "bg-zinc-800 hover:bg-zinc-700"
+        ${active
+          ? "bg-white text-black"
+          : "bg-zinc-800 hover:bg-zinc-700"
         }
       `}
     >
